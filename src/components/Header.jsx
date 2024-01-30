@@ -2,19 +2,39 @@ import '../index.css'
 
 const Header = () => {
   return (
-    <header className="bg-blue-500 p-4">
-      <h1 className="text-white text-2xl font-bold">Your E-Commerce Site</h1>
-      <nav className="mt-2">
-        <ul className="flex">
-          <li className="mr-4 text-white">Home</li>
-          <li className="mr-4 text-white">Products</li>
-          <li className="mr-4 text-white">Cart</li>
-          <li className="text-white">Login</li>
+    <header>
+      <div className='top-nav-container'>
+
+        <div className='nav nav-left'>
+          <i className='fa fa-search' aria-hidden='true'></i>
+          <input type="text" placeholder='Search...' />
+        </div>
+
+        <div className='nav nav-center'>
+          <h1 className='site-title'>sun rise.</h1>
+        </div>
+
+        <div className='nav nav-right'>
+          <i className="fa fa-user-circle-o" aria-hidden="true"></i>
+          <h2>Sign In</h2>
+          <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+        </div>
+
+      </div>
+      <div className='bottom-nav-container'>
+        <ul>
+          <li>Shop All</li>
+          <li>Best Selling</li>
+          <li>Sale</li>
+          <li>Contact</li>
         </ul>
-      </nav>
+
+      </div>
     </header>
   );
 };
 
-
 export default Header;
+
+
+// Home, Products, Cart, Login
