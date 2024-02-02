@@ -54,3 +54,25 @@ ul {
   justify-content: space-around;
   list-style-type: none;
 }
+
+/* Style the links inside the navigation bar */
+.bottom-nav-container a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration:none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.bottom-nav-container a:hover {
+  /* background-color: #af0a0a; */
+  color: rgb(10, 93, 93);
+  text-decoration-line:underline;
+}
+
+/* Add a color to the active/current link */
+.bottom-nav-container a.active {
+  background-color: #04AA6D;
+  color: black;
+}
