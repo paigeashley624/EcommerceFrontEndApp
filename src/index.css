@@ -32,15 +32,25 @@ body {
   border-bottom: 2px solid gray;
 }
 
+.nav-right {
+  display: flex;
+
+align-items: center;}
+
+.nav-right a,
+.nav-right h2 {
+  margin-left: 8px;
+  font-size: small;
+}
+
 .nav-right i {
   display: flex;
   align-items: center;
   margin-left: 30px;
 }
 
-.nav-right h2 {
-  margin-left: 8px;
-  font-size: small;
+.nav-right a {
+  text-decoration: none;
 }
 
 .bottom-nav-container {
