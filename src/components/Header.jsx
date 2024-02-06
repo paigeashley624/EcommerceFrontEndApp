@@ -1,6 +1,14 @@
+import { useState } from 'react';
 import '../index.css'
+import Login from './Login';
 
 const Header = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
   return (
     <header>
       <div className='top-nav-container'>
@@ -17,12 +25,10 @@ const Header = () => {
 
         <div className='nav nav-right'>
           <i className="fa fa-user-circle-o" aria-hidden="true"></i>
-          {/* maybe add a drop down to include 'signup', 'singup', 'logout' */}
-          {/* <h2> Sign In</h2> */}
-          <a href='/login'>Sign In</a>
+          <button onClick={openModal}>Log In</button>
+          {isModalOpen && <Login closeModal={() => setIsModalOpen(false)} />}
           <i className="fa fa-shopping-cart" aria-hidden="true"></i>
           <h2>(0)</h2>
-          {/* the count here will later increase when items are added to the cart   */}
         </div>
 
       </div>
@@ -43,3 +49,5 @@ export default Header;
 
 
 // Home, Products, Cart, Login
+// maybe add a drop down to include 'signup', 'singup', 'logout'
+// the cart count will later increase as items are added to the cart
