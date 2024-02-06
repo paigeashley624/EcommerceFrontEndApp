@@ -32,6 +32,7 @@ const Login = ({closeModal}) => {
   return (
     <div className='modal'>
       <div className='modal-content'>
+        <button type='button' onClick={closeModal} className='close'>X</button>
         <h2>Log In</h2>
         <form onSubmit={handleSubmit}>
         {errors && errors.length > 0 && (
@@ -43,15 +44,14 @@ const Login = ({closeModal}) => {
               </ul>
             </div>
           )}
-          <label htmlFor="username">Username</label>
-          <input type="text" name="username" id="username" placeholder='Username' required/>
+
+          <input type="text" name="username" id="username" placeholder='Your Username' required/>
           <br />
-          <label htmlFor="password">Password</label>
+
           <input type="password" name="password"
-          id="password" placeholder='Password' required/>
+          id="password" placeholder='Your Password' required/>
           <br />
-          <input type="submit" value="Submit"/>
-          <button type='button' onClick={closeModal}>X</button>
+          <input type="submit" value="SIGN IN"/>
         </form>
       </div>
     </div>
